@@ -1,24 +1,10 @@
 (function () {
 'use strict';
 
-angular.module('ShoppingListEventsApp', [])
-.controller('ShoppingListController', ShoppingListController)
-.factory('ShoppingListFactory', ShoppingListFactory)
-.service('WeightLossFilterService', WeightLossFilterService)
-.component('shoppingList', {
-  templateUrl: 'shoppingList.html',
-  controller: ShoppingListComponentController,
-  bindings: {
-    items: '<',
-    myTitle: '@title',
-    onRemove: '&'
-  }
-})
-.component('loadingSpinner', {
-  templateUrl: 'spinner.html',
-  controller: SpinnerController
-});
-
+angular.module('ShoppingListCheckOff', [])
+.controller('ToBuyController', ToBuyController)
+.controller('AlreadyBoughtController', AlreadyBoughtController)
+.service('ShoppingListCheckOffService', ShoppingListCheckOffService)
 
 SpinnerController.$inject = ['$rootScope']
 function SpinnerController($rootScope) {
