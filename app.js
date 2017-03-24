@@ -2,7 +2,11 @@
 (function () {
 'use strict';
 
-var ToBuyList = [
+var shoppingList1 = [
+  "Milk", "Donuts", "Cookies", "Chocolate", "Peanut Butter", "Pepto Bismol", "Pepto Bismol (Chocolate flavor)", "Pepto Bismol (Cookie flavor)"
+];
+
+var shoppingList2 = [
   {
     name: "Milk",
     quantity: "2"
@@ -22,38 +26,29 @@ var ToBuyList = [
 ];
 
 angular.module('ShoppingListCheckOff', [])
-.controller('ToBuyController', ToBuyController);
+.controller('ShoppingListController', ShoppingListController);
 
-ToBuyController.$inject = ['$scope'];
-function ToBuyController($scope) {
-  $scope.ToBuyController = ToBuyList;
-  
+ShoppingListController.$inject = ['$scope'];
+function ShoppingListController($scope) {
+  $scope.shoppingList1 = shoppingList1;
+  $scope.shoppingList2 = shoppingList2;
+
   $scope.addToList = function () {
     var newItem = {
       name: $scope.newItemName,
       quantity: $scope.newItemQuantity
     };
 
-    $scope.ToBuyList.push(newItem);
+    $scope.shoppingList2.push(newItem);
   };
 }
 
 })();
 
-
 // (function () {
 // 'use strict';
 
-// angular.module('ShoppingListCheckOff', [])
-// .controller('ToBuyController', ToBuyController)
-// .controller('AlreadyBoughtController', AlreadyBoughtController)
-// .service('ShoppingListCheckOffService', ShoppingListCheckOffService)
-
-// ToBuyController.$inject = ['$scope'];
-// AlreadyBoughtController.$inject = ['$scope'];
-  
-// function ToBuyController($scope) {
-//   var ToBuyController = [
+// var ToBuyList = [
 //   {
 //     name: "Milk",
 //     quantity: "2"
@@ -71,19 +66,70 @@ function ToBuyController($scope) {
 //     quantity: "5"
 //   }
 // ];
-//   $scope.ToBuyController = ToBuyController;
+
+// angular.module('ShoppingListCheckOff', [])
+// .controller('ToBuyController', ToBuyController);
+
+// ToBuyController.$inject = ['$scope'];
+// function ToBuyController($scope) {
+//   $scope.ToBuyController = ToBuyList;
   
-//   $scope.AlreadyBoughtController = function () {
+//   $scope.addToList = function () {
 //     var newItem = {
 //       name: $scope.newItemName,
 //       quantity: $scope.newItemQuantity
 //     };
 
-//     $scope.AlreadyBoughtController.push(newItem);
+//     $scope.ToBuyList.push(newItem);
 //   };
 // }
 
 // })();
 
 
-// //http://jsfiddle.net/ehmorzpx/
+// // (function () {
+// // 'use strict';
+
+// // angular.module('ShoppingListCheckOff', [])
+// // .controller('ToBuyController', ToBuyController)
+// // .controller('AlreadyBoughtController', AlreadyBoughtController)
+// // .service('ShoppingListCheckOffService', ShoppingListCheckOffService)
+
+// // ToBuyController.$inject = ['$scope'];
+// // AlreadyBoughtController.$inject = ['$scope'];
+  
+// // function ToBuyController($scope) {
+// //   var ToBuyController = [
+// //   {
+// //     name: "Milk",
+// //     quantity: "2"
+// //   },
+// //   {
+// //     name: "Donuts",
+// //     quantity: "200"
+// //   },
+// //   {
+// //     name: "Cookies",
+// //     quantity: "300"
+// //   },
+// //   {
+// //     name: "Chocolate",
+// //     quantity: "5"
+// //   }
+// // ];
+// //   $scope.ToBuyController = ToBuyController;
+  
+// //   $scope.AlreadyBoughtController = function () {
+// //     var newItem = {
+// //       name: $scope.newItemName,
+// //       quantity: $scope.newItemQuantity
+// //     };
+
+// //     $scope.AlreadyBoughtController.push(newItem);
+// //   };
+// // }
+
+// // })();
+
+
+// // //http://jsfiddle.net/ehmorzpx/
