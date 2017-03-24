@@ -2,7 +2,7 @@
 (function () {
 'use strict';
 
-var ToBuyController = [
+var ToBuyList = [
   {
     name: "Milk",
     quantity: "2"
