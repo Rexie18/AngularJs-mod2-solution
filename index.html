@@ -36,8 +36,7 @@
      <h2>To Buy:</h2>
       
      <ul>
-       <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
-       <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li> 
+       <li ng-repeat="item in shoppingList2">Buy 10 cookies <button class="btn btn-default" ng-click="move()"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul> 
       
      <div class="emptyMessage">Everything is bought!</div>
@@ -52,23 +51,7 @@
      <div class="emptyMessage">Nothing bought yet.</div>
     </div>
   </div>
-</div>
-
-  <hr>
-  
-  <div class="container">
-  <h1>ShoppingList</h1>
-
-  <div class="row">
     
-    <!--To Buy List -->
-    <div class="col-md-6" ng-controller='ShoppingListController'>
-     <h3>Shopping List:</h3>
-    <ul>
-        <li ng-repeat="item in shoppingList2">Buy {{item.quantity}} of {{item.name}}(s)<button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
-      </ul> 
-       </div>
-  </div>
 </div>
 </body>
 </html>
