@@ -48,7 +48,7 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
       service.boughtItem.push(entries[0]);
     };
 };
-
+}
 })();
 
 //http://jsfiddle.net/ehmorzpx/
