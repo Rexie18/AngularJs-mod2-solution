@@ -1,6 +1,16 @@
 (function () {
 'use strict';
-var shoppingList2 = [
+
+angular.module('ShoppingListCheckOff', [])
+.controller('ToBuyController', ToBuyController)
+.controller('AlreadyBoughtController', AlreadyBoughtController)
+.service('ShoppingListCheckOffService', ShoppingListCheckOffService)
+
+ToBuyController.$inject = ['$scope'];
+AlreadyBoughtController.$inject = ['$scope'];
+  
+function ToBuyController($scope) {
+  var ToBuyController = [
   {
     name: "Milk",
     quantity: "2"
@@ -18,17 +28,6 @@ var shoppingList2 = [
     quantity: "5"
   }
 ];
-
-angular.module('ShoppingListCheckOff', [])
-.controller('ToBuyController', ToBuyController)
-.controller('AlreadyBoughtController', AlreadyBoughtController)
-.service('ShoppingListCheckOffService', ShoppingListCheckOffService)
-
-
-ToBuyController.$inject = ['$scope'];
-AlreadyBoughtController.$inject = ['$scope'];
-  
-function ToBuyController($scope) {
   $scope.ToBuyController = ToBuyController;
   
   $scope.AlreadyBoughtController = function () {
@@ -44,4 +43,4 @@ function ToBuyController($scope) {
 })();
 
 
-http://jsfiddle.net/ehmorzpx/
+//http://jsfiddle.net/ehmorzpx/
