@@ -20,7 +20,7 @@ var shoppingList2 = [
   }
 ];
 
-angular.module('ShoppingListApp', [])
+angular.module('ShoppingListCheckOff', [])
 .controller('ToBuyController', ToBuyController)
 .controller('AlreadyBoughtController', AlreadyBoughtController)
 .service('ShoppingListService', ShoppingListService)
