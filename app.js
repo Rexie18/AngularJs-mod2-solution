@@ -24,7 +24,7 @@ var shoppingList2 = [
   }
 ];
 
-angular.module('ShoppingListApp', [])
+angular.module('ShoppingListCheckOff', [])
 .controller('ShoppingListController', ShoppingListController);
 
 ShoppingListController.$inject = ['$scope'];
