@@ -51,18 +51,23 @@
     </div>
   </div>
 </div>
-  <div ng-controller='ShoppingListController'>
-      <!-- Shopping List #1: -->
-      <h3>Shopping List:</h3>
-      <!-- <ul>
-        <li ng-repeat="item in shoppingList1">{{ item }}</li>
-      </ul> -->
 
-      <!-- Shopping List #2: -->
-       <ul>
+  <hr>
+  
+  <div class="container">
+  <h1>ShoppingList</h1>
+
+  <div class="row">
+    
+    <!--To Buy List -->
+    <div class="col-md-6" ng-controller='ShoppingListController'>
+     <h3>Shopping List:</h3>
+    <ul>
         <li ng-repeat="item in shoppingList2">Buy {{item.quantity}} of {{item.name}}(s)</li>
       </ul> 
-    </div>
+       </div>
+  </div>
+</div>
   <script src="app.js"></script>
 </body>
 </html>
