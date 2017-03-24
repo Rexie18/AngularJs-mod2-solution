@@ -47,8 +47,7 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
     	var entries = service.shoppingList2.splice(1,1);
       service.boughtItem.push(entries[0]);
     };
-};
-}
+  };
 })();
 
 //http://jsfiddle.net/ehmorzpx/
