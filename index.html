@@ -36,14 +36,14 @@
      <h2>To Buy:</h2>
       
      <ul>
-       <li ng-repeat="item in shoppingList2">Buy 10 cookies <button class="btn btn-default" ng-click="move()"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+       <li ng-repeat="item in shoppingList2">Buy {{item.quantity}} of {{item.name}}(s)<button class="btn btn-default" ng-click="move()"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul> 
       
      <div class="emptyMessage">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller="controller as AlreadyBoughtController">
+    <div class="col-md-6" ng-controller='AlreadyBoughtController'>
      <h2>Already Bought:</h2>
      <ul>
        <li>Bought 10 cookies</li>
