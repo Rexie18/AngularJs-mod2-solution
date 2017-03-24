@@ -26,7 +26,7 @@ angular.module('ShoppingListCheckOff', [])
 
 ToBuyController.$inject = ['$scope'];
 function ToBuyController($scope) {
-  $scope.ToBuyController = ToBuyController;
+  $scope.ToBuyController = ToBuyList;
   
   $scope.addToList = function () {
     var newItem = {
@@ -34,7 +34,7 @@ function ToBuyController($scope) {
       quantity: $scope.newItemQuantity
     };
 
-    $scope.ToBuyController.push(newItem);
+    $scope.ToBuyList.push(newItem);
   };
 }
 
