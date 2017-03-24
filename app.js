@@ -21,12 +21,12 @@ var shoppingList2 = [
 ];
 
 angular.module('ShoppingListApp', [])
-.controller('ShoppingListController', ShoppingListController)
-.controller('ShoppingListShowController', ShoppingListShowController)
+.controller('ToBuyController', ToBuyController)
+.controller('AlreadyBoughtController', AlreadyBoughtController)
 .service('ShoppingListService', ShoppingListService);
 
-ShoppingListController.$inject = ['ShoppingListService'];
-function ShoppingListController(ShoppingListService) {
+ToBuyController.$inject = ['ShoppingListService'];
+function ToBuyController(ShoppingListService) {
  service.shoppingList2 = shoppingList2;
 
   service.addToList = function () {
@@ -39,8 +39,8 @@ function ShoppingListController(ShoppingListService) {
   };
 }
 
-ShoppingListShowController.$inject = ['ShoppingListService'];
-function ShoppingListShowController(ShoppingListService) {
+AlreadyBoughtController.$inject = ['ShoppingListService'];
+function AlreadyBoughtController(ShoppingListService) {
  service.boughtItem = [""];
 
   service.move = function() {
