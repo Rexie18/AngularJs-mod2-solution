@@ -23,7 +23,7 @@ var shoppingList2 = [
 angular.module('ShoppingListApp', [])
 .controller('ToBuyController', ToBuyController)
 .controller('AlreadyBoughtController', AlreadyBoughtController)
-.service('ShoppingListService', ShoppingListService);
+.service('ShoppingListService', ShoppingListService)
 
 ToBuyController.$inject = ['ShoppingListService'];
 function ToBuyController(ShoppingListService) {
