@@ -1,10 +1,6 @@
 (function () {
 'use strict';
 
-var shoppingList1 = [
-  "Milk", "Donuts", "Cookies", "Chocolate", "Peanut Butter", "Pepto Bismol", "Pepto Bismol (Chocolate flavor)", "Pepto Bismol (Cookie flavor)"
-];
-
 var shoppingList2 = [
   {
     name: "Milk",
@@ -24,22 +20,33 @@ var shoppingList2 = [
   }
 ];
 
-angular.module('ShoppingListCheckOff', [])
-.controller('ShoppingListController', ShoppingListController);
+angular.module('ShoppingListApp', [])
+.controller('ShoppingListController', ShoppingListController)
+.controller('ShoppingListShowController', ShoppingListShowController)
+.service('ShoppingListService', ShoppingListService);
 
-ShoppingListController.$inject = ['$scope'];
-function ShoppingListController($scope) {
-  $scope.shoppingList1 = shoppingList1;
-  $scope.shoppingList2 = shoppingList2;
+ShoppingListController.$inject = ['ShoppingListService'];
+function ShoppingListController(ShoppingListService) {
+ service.shoppingList2 = shoppingList2;
 
-  $scope.addToList = function () {
+  service.addToList = function () {
     var newItem = {
-      name: $scope.newItemName,
-      quantity: $scope.newItemQuantity
+      name: service.newItemName,
+      quantity: service.newItemQuantity
     };
 
-    $scope.shoppingList2.push(newItem);
+    service.shoppingList2.push(newItem);
   };
+}
+
+ShoppingListShowController.$inject = ['ShoppingListService'];
+function ShoppingListShowController(ShoppingListService) {
+ service.boughtItem = [""];
+
+  service.move = function() {
+    	var entries = service.shoppingList2.splice(1,1);
+      service.boughtItem.push(entries[0]);
+    };
 }
 
 })();
