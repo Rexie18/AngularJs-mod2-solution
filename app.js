@@ -29,10 +29,11 @@ ToBuyController.$inject = ['ShoppingListService'];
 function ToBuyController(ShoppingListService) {
   var itemAdder = this;
 
-  itemAdder.item = shoppingList2;
+   itemAdder.itemName = "";
+  itemAdder.itemQuantity = "";
 
   itemAdder.addItem = function () {
-    ShoppingListService.addItem(itemAdder.item);
+    ShoppingListService.addItem(itemAdder.itemname, itemAdder.itemquantity);
   }
 }
 
