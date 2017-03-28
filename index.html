@@ -47,6 +47,7 @@
      <h2>Already Bought:</h2>
      <ul>
        <li>Bought 10 cookies</li>
+       <li ng-repeat="item in boughtList">Name: {{item.name}} Quantity: {{item.quantity}}()</li>
      </ul>
      <div class="emptyMessage">Nothing bought yet.</div>
     </div>
