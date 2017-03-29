@@ -45,9 +45,13 @@ function ShoppingListService( ) {
   var service = this;
  
     service.move = function() {
-      service.boughtItem.push(service.shoppingList2.splice(temIdex, 1));
+      service.boughtItem.push(service.shoppingList2.splice(itemIdex, 1));
     };
-  }
+  
+   service.getItems = function () {
+    return items;
+    };
+   }
 })();
 
 
