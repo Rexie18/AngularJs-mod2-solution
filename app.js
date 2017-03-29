@@ -49,7 +49,7 @@ function ShoppingListService( ) {
     };
   
    service.getItems = function () {
-    return items;
+    return service.move;
     };
    }
 })();
