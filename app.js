@@ -48,9 +48,9 @@ function ShoppingListService( ) {
       service.boughtItem.push(service.shoppingList2.splice(itemIdex, 1));
     };
   
-//    service.getItems = function () {
-//     return service.move;
-//     };
+   service.getItems = function () {
+    return service.move;
+    };
    }
 })();
 
