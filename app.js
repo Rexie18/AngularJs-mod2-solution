@@ -21,13 +21,13 @@ function ShoppingListService( ) {
   var service = this;
   
   var newItem = {
-          name: 'New Item',
+          name: " ",
           quantity: " "
         }
   
   service.boughtItem = [{
-          name: 'New Item',
-          quantity: "200"
+          name: " ",
+          quantity: " "
         }];
   
   service.shoppingList2 = [
