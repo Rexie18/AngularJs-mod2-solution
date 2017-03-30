@@ -26,11 +26,7 @@ function ShoppingListService( ) {
           name: " ",
           quantity: " "
         }
-  
-//   service.boughtItem = [{
-//           name: " ",
-//           quantity: " "
-//         }];
+ 
   
   service.shoppingList2 = [
   {
@@ -55,9 +51,6 @@ function ShoppingListService( ) {
   }
 ];
   
-//   service.addToList = function() {
-//         return service.shoppingList2.push(ShoppingListService.copy(newItem));
-//       }
  
     service.move = function() {
       boughtItem.boughtList.push(itemAdder.shoppingList2.splice(itemIdex, 1));
