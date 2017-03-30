@@ -31,7 +31,7 @@ angular.module('ShoppingListCheckOff', [])
 ToBuyController.$inject = ['ShoppingListService'];
 function ToBuyController(ShoppingListService) {
   var itemAdder = this;
- itemAdder.shoppingList2 = shoppingList2;
+ service.shoppingList2 = shoppingList2;
 }
 
 AlreadyBoughtController.$inject = ['ShoppingListService'];
