@@ -52,7 +52,13 @@ function ShoppingListService( ) {
     	var entries = itemAdder.shoppingList2.splice(1, 1);
       service.shoppingList1.push(entries[0]);
     };
+  
+  service.getItems = function(){
+	return service.shoppingList1;
+	};
+  
  }
+  
   
 })();
 
