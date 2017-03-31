@@ -16,16 +16,17 @@ function ToBuyController(ShoppingListService) {
 AlreadyBoughtController.$inject = ['ShoppingListService'];
 function AlreadyBoughtController(ShoppingListService) {
  var boughtItem= this;
-  boughtItem.boughtList= [""];
+  boughtItem.boughtList= ShoppingListService.shoppingList1;
 }
 
 function ShoppingListService( ) {
   var service = this;
   
-  var newItem = {
+  service.shoppingList1 = [{
           name: " ",
           quantity: " "
         }
+      ];
  
   
   service.shoppingList2 = [
@@ -54,8 +55,8 @@ function ShoppingListService( ) {
  
 
   service.move = function() {
-    	var entries = itemAdder.shoppingList2.splice(1, 1);
-      boughtItem.boughtList.newItem.push(entries[0]);
+    	var entries = service.shoppingList2.splice(1, 1);
+      service.shoppingList1.push(entries[0]);
     };
   
 //     service.move = function() {
