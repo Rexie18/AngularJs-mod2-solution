@@ -16,7 +16,7 @@ function ToBuyController(ShoppingListService) {
 AlreadyBoughtController.$inject = ['ShoppingListService'];
 function AlreadyBoughtController(ShoppingListService) {
  var boughtItem= this;
-  boughtItem.boughtList= ShoppingListService.move;
+  boughtItem.boughtList= [""];
 }
 
 function ShoppingListService( ) {
@@ -54,7 +54,7 @@ function ShoppingListService( ) {
  
 
   service.move = function() {
-    	var entries = itemAdder.shoppingList2.splice(itemIdex, 1);
+    	var entries = itemAdder.shoppingList2.splice(1, 1);
       boughtItem.boughtList.newItem.push(entries[0]);
     };
   
