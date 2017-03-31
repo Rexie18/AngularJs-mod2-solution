@@ -22,11 +22,7 @@ function AlreadyBoughtController(ShoppingListService) {
 function ShoppingListService( ) {
   var service = this;
   
-  service.shoppingList1 = [{
-          name: " ",
-          quantity: " "
-        }
-      ];
+  service.shoppingList1 = [];
  
   
   service.shoppingList2 = [
@@ -52,18 +48,11 @@ function ShoppingListService( ) {
   }
 ];
   
- 
-
   service.move = function() {
     	var entries = service.shoppingList2.splice(1, 1);
       service.shoppingList1.push(entries[0]);
     };
-  
-//     service.move = function() {
-//       boughtItem.boughtList.push(itemAdder.shoppingList2.splice(itemIdex, 1));
-//     };
-  
-  }
+ }
   
 })();
 
