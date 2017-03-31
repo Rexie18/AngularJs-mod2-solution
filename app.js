@@ -55,7 +55,7 @@ function ShoppingListService( ) {
 
   service.move = function() {
     	var entries = itemAdder.shoppingList2.splice(itemIdex, 1);
-      service.boughtItem.boughtList.push(entries[0]);
+      ToBuyController.boughtItem.boughtList.push(entries[0]);
     };
   
 //     service.move = function() {
