@@ -49,7 +49,7 @@ function ShoppingListService( ) {
 ];
   
   service.move = function() {
-    	var entries = service.shoppingList2.splice(1, 1);
+    	var entries = itemAdder.shoppingList2.splice(1, 1);
       service.shoppingList1.push(entries[0]);
     };
  }
