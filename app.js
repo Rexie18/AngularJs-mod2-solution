@@ -54,7 +54,7 @@ service.shoppingList1 = [""];
     };
   
   service.getItems = function(){
-	return ShoppingListService.shoppingList1;
+	return service.shoppingList1;
 	};
   
  }
