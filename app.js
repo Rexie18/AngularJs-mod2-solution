@@ -30,7 +30,7 @@ function ShoppingListService( ) {
   },
   {
     "name": "Donuts",
-    "quantity: "200"
+    "quantity": "200"
   },
   {
     "name": "Cookies",
