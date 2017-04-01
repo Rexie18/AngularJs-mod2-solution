@@ -48,17 +48,20 @@ function ShoppingListService( ) {
  
 service.shoppingList1 = [""];
  
-  service.move = function() {
-    	var entries = itemAdder.shoppingList2.splice(1, 1);
-      service.shoppingList1.push(entries[0]);
-    };
+ service.move = function() {
+      service.boughtItem.push(service.shoppingList2.unshift());
+    }
+//   service.move = function() {
+//     	var entries = itemAdder.shoppingList2.splice(1, 1);
+//       service.shoppingList1.push(entries[0]);
+//     };
   
-  service.getItems = function(){
-	return service.shoppingList1;
-	};
+//   service.getItems = function(){
+// 	return service.shoppingList1;
+// 	};
   
  }
-  
+ 
   
 })();
 
