@@ -22,9 +22,7 @@ function AlreadyBoughtController(ShoppingListService) {
 function ShoppingListService( ) {
   var service = this;
   
-  service.shoppingList1 = [""];
- 
-  
+    
   service.shoppingList2 = [
   {
     name: "Milk",
@@ -47,7 +45,9 @@ function ShoppingListService( ) {
     quantity: "5"
   }
 ];
-  
+ 
+service.shoppingList1 = [""];
+ 
   service.move = function() {
     	var entries = itemAdder.shoppingList2.splice(1, 1);
       service.shoppingList1.push(entries[0]);
