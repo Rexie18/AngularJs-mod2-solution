@@ -65,7 +65,6 @@ service.addData = function(itemName, quantity) {   // function(remove)
 
 	service.remove = function(itemIndex){
 		service.shoppingList2.splice(itemIndex,1);
-		service.bought.push(itemIndex,1);
 	}
 
 	service.getItems = function(){
