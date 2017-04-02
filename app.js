@@ -20,13 +20,14 @@ function ToBuyController(ShoppingListService) {
 AlreadyBoughtController.$inject = ['ShoppingListService'];
 function AlreadyBoughtController(ShoppingListService) {
  var boughtItem = this;
-  boughtItem.boughtList = ShoppingListService.getItems();
+//   boughtItem.boughtList = ShoppingListService.getItems();
+boughtItem.boughtList = ShoppingListService.bought;
 }
 
 function ShoppingListService( ) {
   var service = this;
   
-    
+  service.bought = [];    
   service.shoppingList2 = [
   {
     "name": "Milk",
@@ -49,22 +50,40 @@ function ShoppingListService( ) {
     "quantity": "5"
   }
 ];
+	
+
+$scope.remove = function(item, from, to) {
+
+
+        var idx=from.indexOf(item);
+        if (idx != -1) {
+            from.splice(idx, 1);
+            to.push(item);      
+        }
+    };
+
+    
  
-var bought = [];
+// var bought = [];
 
-service.addData = function(itemName, quantity) {   // function(remove)
-	var item = service.remove;
+// service.addData = function(itemName, quantity) {   // function(remove)
+// 	var item = {
+// 		name: itemName,
+// 		quantity: quantity
+// 		};
 		
-	    bought.push(item);
-     };
+// 	    bought.push(item);
+//      };
 
-	service.remove = function(itemIndex){
-		service.shoppingList2.splice(itemIndex,1);
-	}
+// 	service.remove = function(itemIndex){
+// 		service.shoppingList2.splice(itemIndex,1);
+// 	}
 
-	service.getItems = function(){
-		return bought;
-	};
+// 	service.getItems = function(){
+// 		return bought;
+// 	};
+	
+	
 }
  
   
