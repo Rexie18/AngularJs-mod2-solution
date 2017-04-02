@@ -21,13 +21,12 @@ AlreadyBoughtController.$inject = ['ShoppingListService'];
 function AlreadyBoughtController(ShoppingListService) {
  var boughtItem = this;
   boughtItem = ShoppingListService.getItems();
-//boughtItem.boughtList = ShoppingListService.bought;
 }
 
 function ShoppingListService( ) {
   var service = this;
   
-  //service.bought = [];    
+  
   service.shoppingList2 = [
   {
     "name": "Milk",
@@ -51,17 +50,6 @@ function ShoppingListService( ) {
   }
 ];
 	
-
-// service.remove = function(item, itemAdder, boughtItem) {
-
-
-//         var idx=from.indexOf(item);
-//         if (idx != -1) {
-//             from.splice(idx, 1);
-//             to.push(item);      
-//         }
-//     };
-
     
  
 var bought = [];
@@ -72,10 +60,10 @@ service.addData = function(itemName, quantity) {   // function(remove)
 		quantity: quantity
 		};
 		
-	    bought.push(item);
+	   // bought.push(item);
      };
 
-	service.remove = function(itemIndex, shoppingList2, bought){
+	service.remove = function(itemIndex){
 		service.shoppingList2.splice(itemIndex,1);
 		service.bought.push(itemIndex,1);
 	}
