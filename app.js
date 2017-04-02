@@ -52,7 +52,7 @@ function ShoppingListService( ) {
  
 var bought = [];
 
-service.addData = function(itemAdder) {   // function(remove)
+service.addData = function(itemName, quantity) {   // function(remove)
 	var item = {
 		"name": itemName,
 		"quantity": quantity
