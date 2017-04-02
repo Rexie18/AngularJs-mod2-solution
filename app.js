@@ -54,8 +54,8 @@ var bought = [];
 
 service.addData = function(itemAdder.remove) {   // function(remove)
 	var item = {
-		name: itemName,
-		quantity: quantity
+		"name": itemName,
+		"quantity": quantity
 		};
 		
 	    bought.push(item);
