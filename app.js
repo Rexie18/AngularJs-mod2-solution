@@ -52,7 +52,7 @@ function ShoppingListService( ) {
 ];
 	
 
-$scope.remove = function(item, from, to) {
+service.remove = function(item, from, to) {
 
 
         var idx=from.indexOf(item);
