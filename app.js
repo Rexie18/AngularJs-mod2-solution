@@ -10,7 +10,7 @@ angular.module('ShoppingListCheckOff', [])
 ToBuyController.$inject = ['ShoppingListService'];
 function ToBuyController(ShoppingListService) {
   var itemAdder = this;
-  itemAdder.shoppingList2 = ShoppingListService.shoppingList2;
+  itemAdder = ShoppingListService.shoppingList2;
   
   itemAdder.remove = function (itemIndex){
   ShoppingListService.remove(itemIndex)
@@ -20,14 +20,14 @@ function ToBuyController(ShoppingListService) {
 AlreadyBoughtController.$inject = ['ShoppingListService'];
 function AlreadyBoughtController(ShoppingListService) {
  var boughtItem = this;
-//   boughtItem.boughtList = ShoppingListService.getItems();
-boughtItem.boughtList = ShoppingListService.bought;
+  boughtItem = ShoppingListService.getItems();
+//boughtItem.boughtList = ShoppingListService.bought;
 }
 
 function ShoppingListService( ) {
   var service = this;
   
-  service.bought = [];    
+  //service.bought = [];    
   service.shoppingList2 = [
   {
     "name": "Milk",
@@ -52,36 +52,37 @@ function ShoppingListService( ) {
 ];
 	
 
-service.remove = function(item, from, to) {
+// service.remove = function(item, itemAdder, boughtItem) {
 
 
-        var idx=from.indexOf(item);
-        if (idx != -1) {
-            from.splice(idx, 1);
-            to.push(item);      
-        }
-    };
+//         var idx=from.indexOf(item);
+//         if (idx != -1) {
+//             from.splice(idx, 1);
+//             to.push(item);      
+//         }
+//     };
 
     
  
-// var bought = [];
+var bought = [];
 
-// service.addData = function(itemName, quantity) {   // function(remove)
-// 	var item = {
-// 		name: itemName,
-// 		quantity: quantity
-// 		};
+service.addData = function(itemName, quantity) {   // function(remove)
+	var item = {
+		name: itemName,
+		quantity: quantity
+		};
 		
-// 	    bought.push(item);
-//      };
+	    bought.push(item);
+     };
 
-// 	service.remove = function(itemIndex){
-// 		service.shoppingList2.splice(itemIndex,1);
-// 	}
+	service.remove = function(itemIndex, shoppingList2, bought){
+		service.shoppingList2.splice(itemIndex,1);
+		service.bought.push(itemIndex,1);
+	}
 
-// 	service.getItems = function(){
-// 		return bought;
-// 	};
+	service.getItems = function(){
+		return bought;
+	};
 	
 	
 }
