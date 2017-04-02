@@ -53,10 +53,7 @@ function ShoppingListService( ) {
 var bought = [];
 
 service.addData = function(itemName, quantity) {   // function(remove)
-	var item = {
-		"name": itemName,
-		"quantity": quantity
-		};
+	var item = service.remove;
 		
 	    bought.push(item);
      };
