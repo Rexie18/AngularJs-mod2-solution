@@ -40,7 +40,7 @@
          <button class="btn btn-default" ng-click="itemAdder.remove($index)"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul> 
       
-     <div ng-hide="itemAdder.length" class="emptyMessage">Everything is bought!</div>
+     <div ng-hide="itemAdder.shoppingList2.length" class="emptyMessage">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
@@ -49,9 +49,9 @@
      <ul>
        <li>Bought <span ng-bind="boughtItem.boughtItem.length"></span> 10 cookies</li>
       
-       <li ng-repeat="item in boughtItem">Name: {{item.name}} , Quantity: {{item.quantity}}</li>
+       <li ng-repeat="item in boughtItem.boughtList">Name: {{item.name}} , Quantity: {{item.quantity}}</li>
      </ul>
-      <div ng-hide="boughtItem.length" class="emptyMessage">Nothing bought yet.</div>
+      <div ng-hide="boughtItem.boughtItem.boughtList.length" class="emptyMessage">Nothing bought yet.</div>
     </div>
   </div>
     
