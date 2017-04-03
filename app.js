@@ -58,13 +58,12 @@ service.addData = function(itemName, quantity) {   // function(remove)
 	var item = {
 		name: itemName,
 		quantity: quantity
-		};
-		
-	   bought.push(item);
+		};	
      };
 
 	service.remove = function(itemIndex){
 		service.shoppingList2.splice(itemIndex,1);
+		service.bought.push(item);
 	}
 
 	service.getItems = function(){
@@ -76,5 +75,3 @@ service.addData = function(itemName, quantity) {   // function(remove)
  
   
 })();
-
-
