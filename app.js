@@ -30,24 +30,24 @@ function ShoppingListService( ) {
   
   service.shoppingList2 = [
   {
-    "name": "Milk",
-    "quantity": "2"
+    name: "Milk",
+    quantity: "2"
   },
   {
-    "name": "Donuts",
-    "quantity": "200"
+    name: "Donuts",
+    quantity: "200"
   },
   {
-    "name": "Cookies",
-    "quantity": "300"
+    name: "Cookies",
+    quantity: "300"
   },
    {
-    "name": "Musli",
-    "quantity": "10"
+    name: "Musli",
+    quantity: "10"
   },
   {
-    "name": "Chocolate",
-    "quantity": "5"
+    name: "Chocolate",
+    quantity: "5"
   }
 ];
 	
@@ -69,27 +69,3 @@ service.bought = [];
   
 })();    
  
-// var bought = [];
-
-// service.addData = function(itemName, quantity) {   // function(remove)
-// 	var item = {
-// 		name: itemName,
-// 		quantity: quantity
-// 		};
-// 	bought.push(item);
-//      };
-
-// 	service.remove = function(itemIndex){
-// 		service.shoppingList2.splice(itemIndex,1);
-		
-// 	}
-
-// 	service.getItems = function(){
-// 		return bought;
-// 	};
-	
-	
-// }
- 
-  
-// })();
