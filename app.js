@@ -61,6 +61,7 @@ service.bought = [];
 
 	service.getItems = function(){
 		return service.bought.push(service.shoppingList2.splice(itemIndex,1));
+		//return service.bought;
 	};
 	
 	
