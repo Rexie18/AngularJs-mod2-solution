@@ -1,6 +1,5 @@
 (function () {
-'use strict';
-  
+'use strict'; 
   
 angular.module('ShoppingListCheckOff', [])
 .controller('ToBuyController', ToBuyController)
@@ -21,12 +20,10 @@ AlreadyBoughtController.$inject = ['ShoppingListService'];
 function AlreadyBoughtController(ShoppingListService) {
  var boughtItem = this;
   boughtItem.boughtList = ShoppingListService.getItems();
- // boughtItem.boughtList = ShoppingListService.bought;
-}
+ }
 
 function ShoppingListService( ) {
   var service = this;
-  
   
   service.shoppingList2 = [
   {
@@ -53,7 +50,6 @@ function ShoppingListService( ) {
 	
 service.bought = [];
 
-
 	service.remove = function(itemIndex){
                 var objToBeTransfered = service.shoppingList2[itemIndex];
                 service.shoppingList2.splice(itemIndex,1)
@@ -61,13 +57,9 @@ service.bought = [];
 	}
 
 	service.getItems = function(){
-		//return service.bought.push(service.shoppingList2.splice(itemIndex,1));
 		return service.bought;
 	};
-	
-	
 }
- 
   
 })();    
  
