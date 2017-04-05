@@ -20,8 +20,8 @@ function ToBuyController(ShoppingListService) {
 AlreadyBoughtController.$inject = ['ShoppingListService'];
 function AlreadyBoughtController(ShoppingListService) {
  var boughtItem = this;
-  //boughtItem.boughtList = ShoppingListService.getItems();
-  boughtItem.boughtList = ShoppingListService.bought;
+  boughtItem.boughtList = ShoppingListService.getItems();
+ // boughtItem.boughtList = ShoppingListService.bought;
 }
 
 function ShoppingListService( ) {
@@ -55,13 +55,14 @@ service.bought = [];
 
 
 	service.remove = function(itemIndex){
-		service.bought.push(service.shoppingList2.splice(itemIndex,1));
-		
+                var objToBeTransfered = service.shoppingList2[itemIndex];
+                service.shoppingList2.splice(itemIndex,1)
+		service.bought.push(objToBeTransfered);
 	}
 
 	service.getItems = function(){
-		return service.bought.push(service.shoppingList2.splice(itemIndex,1));
-		//return service.bought;
+		//return service.bought.push(service.shoppingList2.splice(itemIndex,1));
+		return service.bought;
 	};
 	
 	
